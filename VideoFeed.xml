@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Skelton">
+    <Require feature="rpc"/>
+    <Require feature="views"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+    
+    <script type="text/javascript" src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+    
+	<body style="padding: 10px">
+	<h3>Video feed edit</h3>
+
+   <script>
+   
+   function init() {
+  	gapi.hangout.onApiReady.add(function(e){
+  		if(e.isApiReady){
+  			AdjustVideoArea();
+  		}
+  	});
+  };
+      
+   function AdjustVideoArea() {
+   
+	var id = gapi.hangout.getLocalParticipantId();
+	var canvas = gapi.hangout.layout.getVideoCanvas();
+
+	canvas.setWidth(150);
+	canvas.setPosition(10, 10);
+	canvas.setVisible(true);
+
+	var id = gapi.hangout.getLocalParticipantId();
+	var feed = gapi.hangout.layout.createParticipantVideoFeed(id);
+	var canvas = gapi.hangout.layout.getVideoCanvas();
+
+	// Set the feed
+	canvas.setVideoFeed(feed);
+	
+    };
+
+    window.onload = init();
+
+   </script>
+
+
+
+    
+    ]]>
+  </Content>
+</Module>
