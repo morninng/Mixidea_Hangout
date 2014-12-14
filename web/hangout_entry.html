@@ -1,0 +1,40 @@
+<html>
+<head></head>
+
+<body>
+
+<script src="//www.parsecdn.com/js/parse-1.3.2.min.js"></script>
+
+<script type="text/javascript">
+
+function login_hangout(){
+
+	Parse.initialize("wxaNxdtmCOUJm8QHPYr8khYkFJiBTMvEnv1jCDZg", "OuSaCarL4ltnPsuwptJMBvoZ7v3071MCUE7Y5MfD");
+	var currentUser = Parse.User.current();
+
+	console.log("login hangout");
+	var hagout_domain = "https://plus.google.com/hangouts/_?"
+	var hangout_gid = "gid=172012775158"
+	var hangout_query_key = "&gd=";
+	var hangout_query_value = currentUser.id;
+	var hangout_link= hagout_domain + hangout_gid + hangout_query_key + hangout_query_value;
+
+	location.href = hangout_link;
+
+}
+
+</script>
+
+
+<a style="text-decoration:none;" onclick="login_hangout()" target="_blank">
+  <img src="https://ssl.gstatic.com/s2/oz/images/stars/hangout/1/gplus-hangout-60x230-normal.png"
+    alt="Start a Hangout"
+    style="border:0;width:230px;height:60px;"/>
+</a>
+
+</body>
+
+
+
+
+</html>
