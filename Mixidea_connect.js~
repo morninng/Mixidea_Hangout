@@ -1,10 +1,11 @@
 
+
 function check_user(){
+
 	console.log("check user");
 	Parse.initialize("wxaNxdtmCOUJm8QHPYr8khYkFJiBTMvEnv1jCDZg", "OuSaCarL4ltnPsuwptJMBvoZ7v3071MCUE7Y5MfD");
 
 	var appData = gadgets.views.getParams()['appData'];	
-	console.log(appData);
 	var appData_split = appData.split("_");
 	var user_id = appData_split[0];
 	var event_id = appData_split[1];
@@ -26,6 +27,12 @@ function check_user(){
 		event_obj.set("hangout_url",hangout_url);
 		return event_obj.save()
 	}).then(function(){
-		console.log("event has been registered to parse");
+		console.log("event has been registered to parse")
+	});
+			
+			
+		},
+		error: function(){
+		}
 	});
  }

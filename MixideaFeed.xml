@@ -20,6 +20,7 @@
 <script type="text/javascript" src="//webdemo.dac.co.jp/FlexOneStandard/mixidea_hangout/Mixidea_connect.js"></script>
 
 <script type="text/javascript" src="//webdemo.dac.co.jp/FlexOneStandard/mixidea_hangout/model/mixidea_user.js"></script>
+<script type="text/javascript" src="//webdemo.dac.co.jp/FlexOneStandard/mixidea_hangout/model/mixidea_event.js"></script>
 
 <script>
 function update_feed(){
